@@ -52,7 +52,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="hero">
           <h2 className="hero-title">
-            <span className="premium">Premium.</span> Yours.
+            <span className="premium">Transparent. Fast. Reliable. Swaps. Premium. Yours.</span>
           </h2>
           <p className="hero-sub">
             Know your exact fee before you swap. Real-time calculator. Instant execution.
