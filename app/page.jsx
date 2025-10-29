@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function HomePage() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [amount, setAmount] = useState(100);
   const [type, setType] = useState("crypto");
   const [fee, setFee] = useState(0);
@@ -41,11 +41,10 @@ export default function HomePage() {
         {/* Header */}
         <header className="header">
           <div className="logo">
-            <Image src="/logo.png" alt="PaySwap Logo" width={40} height={40} />
-            <h1 className="brand">PaySwap</h1>
+            <Image src="/logo.png" alt="PaySwap Logo" width={130} height={40} />
           </div>
           <button className="toggle-btn" onClick={toggleTheme}>
-            {theme === "dark" ? "☀️" : "🌙"}
+            {theme === "light" ? "☀️" : "🌙"}
           </button>
         </header>
 
