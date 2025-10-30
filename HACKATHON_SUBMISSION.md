@@ -3,14 +3,17 @@
 ## Team: The Debuggers
 
 ### Overview
+
 Our team successfully integrated the provided hackathon endpoints into a comprehensive, user-friendly fee calculation application that demonstrates real-time API consumption and dynamic fee computation.
 
 ## API Endpoints Integration
 
 ### 1. Fee Endpoint Integration
+
 **Endpoint**: `https://2kbbumlxz3.execute-api.us-east-1.amazonaws.com/default/fee`
 
 #### Our Interpretation & Implementation:
+
 - **Data Structure**: We parsed the complex nested JSON structure containing Customer and Business service categories
 - **Dynamic Service Display**: Created a comprehensive service categories component that displays all available services from both Customer and Business accounts
 - **Real-time Fee Calculation**: Implemented dynamic fee calculation supporting multiple fee types:
@@ -20,16 +23,19 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
   - Free services ("FREE")
 
 #### Key Features Implemented:
-- **Service Categories Display**: 
+
+- **Service Categories Display**:
   - Customer services: Freedom Virtual Card, US/NG Virtual Bank Accounts, Payout, Wallet Transfer, FX
   - Business services: Collections, Business Payout, Virtual Bank Accounts, FX, Wallet Transfer
 - **Interactive Calculator**: Users can select account type, service category, and specific service
 - **Multi-currency Support**: USD and NGN calculations with proper formatting
 
 ### 2. Exchange Rate Endpoint Integration
+
 **Endpoint**: `https://2kbbumlxz3.execute-api.us-east-1.amazonaws.com/default/exchange?from=USD&to=NGN`
 
 #### Our Interpretation & Implementation:
+
 - **Real-time Rate Display**: Shows current USD to NGN conversion rate (1 USD = 1480 NGN)
 - **Currency Conversion**: Automatic conversion of amounts and fees between USD and NGN
 - **Live Rate Integration**: Fetched exchange rates and integrated them into fee calculations
@@ -37,12 +43,14 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 ## Technical Architecture
 
 ### Component-Based Structure:
+
 1. **API Service Layer** (`services/api.js`): Handles all endpoint communications
 2. **Calculation Engine** (`utils/feeCalculations.js`): Processes complex fee structures
 3. **Modular Components**: Header, Hero, ServiceCategories, Calculator, LoadingError, Footer
 4. **Error Handling**: Comprehensive error states with retry functionality
 
 ### Key Technical Achievements:
+
 - **Robust Fee Parser**: Handles complex fee strings with regex parsing
 - **Real-time Calculations**: Updates fees instantly as users change inputs
 - **Responsive Design**: Works seamlessly across all device sizes
@@ -52,17 +60,20 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 ## User Experience Features
 
 ### 1. Service Discovery
+
 - Visual service category cards with icons and pricing
 - Account type switching (Customer/Business)
 - Service preview with fee information
 
 ### 2. Fee Calculator
+
 - 4-step calculation process: Amount → Currency → Category → Service
 - Real-time fee computation with instant updates
 - Clear breakdown: Amount, Fee, Net Amount
 - Currency conversion with live exchange rates
 
 ### 3. Error Handling & UX
+
 - Graceful error handling with retry functionality
 - Input validation preventing invalid entries
 - Loading states with animated indicators
@@ -79,6 +90,7 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 ## Innovation & User Value
 
 ### Beyond Basic Integration:
+
 - **Enhanced UX**: Professional design with animations and smooth interactions
 - **Comprehensive Coverage**: Displays ALL available services from the API
 - **Real-world Utility**: Practical fee calculator that users can actually use
@@ -86,6 +98,7 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 - **Mobile Optimization**: Responsive design for all devices
 
 ### Business Value:
+
 - **Transparency**: Users see exact fees before transactions
 - **Comparison**: Easy comparison between different services
 - **Trust Building**: Clear, upfront pricing builds user confidence
@@ -94,12 +107,14 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 ## Technical Highlights
 
 ### Code Quality:
+
 - Modular, reusable components
 - Comprehensive error handling
 - Type-safe calculations with fallbacks
 - Performance optimized with efficient state management
 
 ### API Integration Best Practices:
+
 - Parallel API requests for faster loading
 - Proper error handling and retry mechanisms
 - Data validation and sanitization

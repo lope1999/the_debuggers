@@ -1,6 +1,7 @@
 # API Integration Summary - The Debuggers
 
 ## Project Overview
+
 **Team:** The Debuggers  
 **Project:** Interactive Fee Calculator with Real-time API Integration  
 **Repository:** https://github.com/lope1999/the_debuggers.git
@@ -8,17 +9,21 @@
 ## API Endpoints Integration
 
 ### 1. Fee Endpoint (`/fee`)
+
 **Implementation:**
+
 - Parsed complex nested JSON structure (Customer/Business service categories)
 - Created dynamic service display showing ALL available services
 - Built robust fee calculation engine supporting:
   - Fixed fees ("$1", "$0.50", "₦200")
-  - Percentage fees ("1.5%", "3%") 
+  - Percentage fees ("1.5%", "3%")
   - Capped percentage fees ("1.5% ($1 – $5)")
   - Free services ("FREE")
 
 ### 2. Exchange Rate Endpoint (`/exchange`)
+
 **Implementation:**
+
 - Real-time USD to NGN conversion (1 USD = 1480 NGN)
 - Automatic currency conversion for amounts and fees
 - Live rate display integrated into calculator
@@ -26,12 +31,14 @@
 ## Key Technical Achievements
 
 ### Architecture:
+
 - **Component-based structure** with modular, reusable components
 - **API service layer** for centralized endpoint management
 - **Calculation engine** with regex parsing for complex fee strings
 - **Real-time state management** for instant UI updates
 
 ### User Experience:
+
 - **Interactive 4-step calculator**: Amount → Currency → Category → Service
 - **Service discovery** with visual category cards and pricing preview
 - **Multi-currency support** with automatic conversion
@@ -39,6 +46,7 @@
 - **Responsive design** with light/dark theme support
 
 ### Innovation Beyond Requirements:
+
 - **Enhanced UX** with animations and smooth interactions
 - **Comprehensive service coverage** displaying all API services
 - **Real-world utility** as a practical fee calculator
@@ -46,12 +54,14 @@
 - **Mobile optimization** for all device sizes
 
 ## Business Value Delivered
+
 - **Transparency:** Users see exact fees before transactions
-- **Trust building:** Clear, upfront pricing builds confidence  
+- **Trust building:** Clear, upfront pricing builds confidence
 - **Accessibility:** Multi-currency support for broader user base
 - **Comparison capability:** Easy service and fee comparison
 
 ## Technical Highlights
+
 - Parallel API requests for faster loading
 - Input validation preventing invalid entries
 - Comprehensive error boundaries preventing crashes
