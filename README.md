@@ -4,6 +4,7 @@
 
 ## 🚀 Live Demo
 
+**Live Application:** https://thedebuggersmyfeeapp.vercel.app/  
 **Repository:** https://github.com/lope1999/the_debuggers.git  
 **Team:** The Debuggers  
 **Tech Stack:** Next.js 16.0.0, React, Tailwind CSS, Lucide Icons
@@ -89,7 +90,11 @@ app/
 - **4-step calculator process:** Amount → Currency → Category → Service
 - **Interactive service discovery** with visual category cards
 - **Multi-currency support** (USD/NGN) with live conversion
-- **Theme system** (Light/Dark mode) with smooth transitions
+- **Advanced Theme System** (Light/Dark mode) with:
+  - Smooth transitions and gradient backgrounds
+  - Dynamic color schemes for different themes
+  - Mouse-interactive animated background orbs
+  - Theme-aware component styling
 - **Responsive design** optimized for all devices
 - **Loading states** with professional animations
 - **Error handling** with retry functionality
@@ -102,6 +107,50 @@ app/
 - **Color-coded services** for easy identification
 - **Professional typography** and spacing
 - **Accessibility considerations** throughout the interface
+
+#### 5. **Advanced Theme Implementation**
+
+Our application features a sophisticated dual-theme system:
+
+**🌙 Dark Mode Features:**
+
+- Deep gradient backgrounds (`from-gray-900 via-blue-950 to-gray-900`)
+- Enhanced glass morphism effects with backdrop blur
+- Dynamic color adaptation for all UI components
+- Improved readability with high contrast ratios
+
+**☀️ Light Mode Features:**
+
+- Clean gradient backgrounds (`from-gray-50 via-blue-50 to-gray-100`)
+- Subtle shadows and professional styling
+- Optimized color schemes for daylight usage
+- Consistent branding across all components
+
+**🎭 Theme System Technical Implementation:**
+
+```javascript
+// Theme state management with React hooks
+const [theme, setTheme] = useState("light");
+
+// Dynamic theme switching with smooth transitions
+const toggleTheme = () => {
+  setTheme(theme === "dark" ? "light" : "dark");
+};
+
+// Component-level theme awareness
+className={`transition-all duration-700 ${
+  theme === "dark"
+    ? "bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900"
+    : "bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100"
+}`}
+```
+
+**🎨 Interactive Background Effects:**
+
+- Mouse-tracking animated orbs that respond to cursor movement
+- Blend mode effects (`mix-blend-multiply`) for artistic backgrounds
+- CSS animations with staggered delays for dynamic movement
+- Hardware-accelerated transforms for smooth performance
 
 ---
 
@@ -235,11 +284,26 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ---
 
-## 📞 Contact & Submission
+## � Team Members
+
+**The Debuggers Team:**
+
+- **@suliat** - Team Lead/Frontend Engineer  
+  📧 alagasuliattitilope@gmail.com
+
+- **@henrytech** - Backend Engineer
+
+- **@emekafx** - UI/UX Designer
+
+- **@emmanuel** - Product Manager
+
+---
+
+## �📞 Contact & Submission
 
 **Team:** The Debuggers  
 **Repository:** [https://github.com/lope1999/the_debuggers.git](https://github.com/lope1999/the_debuggers.git)  
-**Live Demo:** Available at deployed URL  
+**Live Application:** [https://thedebuggersmyfeeapp.vercel.app/](https://thedebuggersmyfeeapp.vercel.app/)  
 **Submission Date:** October 30, 2025
 
 ---

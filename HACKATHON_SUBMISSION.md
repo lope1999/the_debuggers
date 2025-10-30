@@ -2,15 +2,23 @@
 
 ## Team: The Debuggers
 
-### Overview
+### 🚀 Live Demo
 
-Our team successfully integrated the provided hackathon endpoints into a comprehensive, user-friendly fee calculation application that demonstrates real-time API consumption and dynamic fee computation.
+**Live Application:** https://thedebuggersmyfeeapp.vercel.app/  
+**Repository:** https://github.com/lope1999/the_debuggers.git
+
+### 👥 Team Members
+
+- **@suliat** - Team Lead/Frontend Engineer (alagasuliattitilope@gmail.com)
+- **@henrytech** - Backend Engineer
+- **@emekafx** - UI/UX Designer
+- **@emmanuel** - Product Manager
 
 ## API Endpoints Integration
 
 ### 1. Fee Endpoint Integration
 
-**Endpoint**: `https://2kbbumlxz3.execute-api.us-east-1.amazonaws.com/default/fee`
+**Endpoint:** `https://2kbbumlxz3.execute-api.us-east-1.amazonaws.com/default/fee`
 
 #### Our Interpretation & Implementation:
 
@@ -32,7 +40,7 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 
 ### 2. Exchange Rate Endpoint Integration
 
-**Endpoint**: `https://2kbbumlxz3.execute-api.us-east-1.amazonaws.com/default/exchange?from=USD&to=NGN`
+**Endpoint:** `https://2kbbumlxz3.execute-api.us-east-1.amazonaws.com/default/exchange?from=USD&to=NGN`
 
 #### Our Interpretation & Implementation:
 
@@ -54,7 +62,7 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 - **Robust Fee Parser**: Handles complex fee strings with regex parsing
 - **Real-time Calculations**: Updates fees instantly as users change inputs
 - **Responsive Design**: Works seamlessly across all device sizes
-- **Theme Support**: Light/dark mode with smooth transitions
+- **Advanced Theme System**: Professional Light/Dark mode with smooth transitions and interactive backgrounds
 - **Loading States**: Professional loading indicators and error handling
 
 ## User Experience Features
@@ -72,20 +80,19 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 - Clear breakdown: Amount, Fee, Net Amount
 - Currency conversion with live exchange rates
 
-### 3. Error Handling & UX
+### 3. Advanced Theme Implementation
+
+- **Dual Theme System**: Professional Light and Dark modes
+- **Interactive Backgrounds**: Mouse-tracking animated orbs with blend effects
+- **Smooth Transitions**: Hardware-accelerated animations throughout
+- **Dynamic Color Adaptation**: All components theme-aware
+
+### 4. Error Handling & UX
 
 - Graceful error handling with retry functionality
 - Input validation preventing invalid entries
 - Loading states with animated indicators
 - Comprehensive error messages
-
-## Data Flow Implementation
-
-1. **API Data Fetching**: Parallel requests to both endpoints on app load
-2. **Data Processing**: Parse complex nested service structures
-3. **State Management**: React state management for real-time updates
-4. **Calculation Pipeline**: Amount → Service Selection → Fee Calculation → Currency Conversion
-5. **UI Updates**: Real-time display updates with proper formatting
 
 ## Innovation & User Value
 
@@ -96,6 +103,7 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 - **Real-world Utility**: Practical fee calculator that users can actually use
 - **Error Resilience**: Handles network issues and API errors gracefully
 - **Mobile Optimization**: Responsive design for all devices
+- **Professional Theming**: Enterprise-grade UI with advanced theme system
 
 ### Business Value:
 
@@ -124,5 +132,5 @@ Our team successfully integrated the provided hackathon endpoints into a compreh
 
 Our team successfully transformed the provided endpoints into a production-ready, user-centric application that not only displays the API data but enhances it with real-world utility, comprehensive error handling, and professional UX design. The application demonstrates practical API integration skills while delivering genuine value to end users.
 
-**Live Application**: Available at the deployed URL
-**Repository**: https://github.com/lope1999/the_debuggers.git
+**Live Application:** https://thedebuggersmyfeeapp.vercel.app/  
+**Repository:** https://github.com/lope1999/the_debuggers.git

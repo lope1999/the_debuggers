@@ -3,8 +3,15 @@
 ## Project Overview
 
 **Team:** The Debuggers  
-**Project:** Interactive Fee Calculator with Real-time API Integration  
+**Live App:** https://thedebuggersmyfeeapp.vercel.app/  
 **Repository:** https://github.com/lope1999/the_debuggers.git
+
+## Team Members
+
+- **@suliat** - Team Lead/Frontend Engineer (alagasuliattitilope@gmail.com)
+- **@henrytech** - Backend Engineer
+- **@emekafx** - UI/UX Designer
+- **@emmanuel** - Product Manager
 
 ## API Endpoints Integration
 
@@ -42,16 +49,18 @@
 - **Interactive 4-step calculator**: Amount → Currency → Category → Service
 - **Service discovery** with visual category cards and pricing preview
 - **Multi-currency support** with automatic conversion
+- **Advanced theme system** with Light/Dark modes and interactive backgrounds
 - **Professional error handling** with retry functionality
-- **Responsive design** with light/dark theme support
+- **Responsive design** with smooth animations
 
 ### Innovation Beyond Requirements:
 
-- **Enhanced UX** with animations and smooth interactions
+- **Enhanced UX** with mouse-tracking animated backgrounds
 - **Comprehensive service coverage** displaying all API services
 - **Real-world utility** as a practical fee calculator
 - **Error resilience** handling network issues gracefully
 - **Mobile optimization** for all device sizes
+- **Professional theming** with hardware-accelerated animations
 
 ## Business Value Delivered
 
@@ -67,5 +76,8 @@
 - Comprehensive error boundaries preventing crashes
 - Type-safe calculations with proper fallbacks
 - Performance optimized state management
+- Advanced CSS animations with blend modes
 
-**Result:** Production-ready application that transforms raw API data into genuine user value with professional UX and robust error handling.
+**Result:** Production-ready application that transforms raw API data into genuine user value with professional UX, advanced theming, and robust error handling.
+
+**Live Demo:** https://thedebuggersmyfeeapp.vercel.app/
