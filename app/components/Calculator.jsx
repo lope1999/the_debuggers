@@ -227,7 +227,7 @@ export default function Calculator({
       )}
 
       <button 
-        className="group relative w-full px-8 py-5 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-full text-xl shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:scale-105"
+        className="group mt-4 relative w-full px-8 py-5 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-full text-xl shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:scale-105"
         disabled={!selectedService}
         onClick={() => {
           if (selectedService) {
