@@ -3,12 +3,16 @@
 import { useState, useEffect } from "react";
 import { getFees, getExchangeRate } from "./services/api";
 import { calculateFee, getServiceFromFees } from "./utils/feeCalculations";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ServiceCategories from "./components/ServiceCategories";
 import Calculator from "./components/Calculator";
 import LoadingError from "./components/LoadingError";
 import Footer from "./components/Footer";
+import FeeComparison from "./components/FeeComparison";
+import TransactionHistory from "./components/TransactionHistory";
+import { QuickHelpGuide } from "./components/HelpTooltip";
+import AIAssistant from "./components/AIAssistant";
 
 export default function HomePage() {
   const [theme, setTheme] = useState("light");
@@ -24,6 +28,7 @@ export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedService, setSelectedService] = useState("");
   const [currency, setCurrency] = useState("USD");
+  const [activeSection, setActiveSection] = useState("home");
 
   const fetchData = async () => {
     try {
@@ -118,22 +123,28 @@ export default function HomePage() {
         <div className="absolute w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000 bottom-0 left-1/2" />
       </div>
 
+      <Navbar theme={theme} toggleTheme={toggleTheme} activeSection={activeSection} setActiveSection={setActiveSection} />
+
       <div className="relative max-w-7xl mx-auto px-4 py-8">
-        <Header theme={theme} toggleTheme={toggleTheme} />
-        <Hero theme={theme} />
+        <div id="home">
+          <Hero theme={theme} />
+        </div>
         
         <LoadingError loading={loading} error={error} theme={theme} onRetry={fetchData} />
         
         {!loading && !error && (
           <>
-            <ServiceCategories 
-              fees={fees} 
-              theme={theme} 
-              userType={userType} 
-              setUserType={setUserType} 
-            />
+            <div id="services">
+              <ServiceCategories 
+                fees={fees} 
+                theme={theme} 
+                userType={userType} 
+                setUserType={setUserType} 
+              />
+            </div>
             
-            <Calculator 
+            <div id="calculator">
+              <Calculator 
               theme={theme}
               fees={fees}
               exchangeRate={exchangeRate}
@@ -149,11 +160,32 @@ export default function HomePage() {
               currency={currency}
               setCurrency={setCurrency}
             />
+            </div>
+
+            <div id="comparison">
+              <FeeComparison
+              fees={fees}
+              theme={theme}
+              userType={userType}
+              amount={amount}
+              currency={currency}
+              exchangeRate={exchangeRate}
+            />
+            </div>
           </>
         )}
         
         <Footer theme={theme} />
       </div>
+
+      {/* Transaction History - Fixed position */}
+      <TransactionHistory theme={theme} currency={currency} />
+      
+      {/* Quick Help Guide */}
+      <QuickHelpGuide theme={theme} />
+
+      {/* AI Assistant */}
+      <AIAssistant theme={theme} fees={fees} exchangeRate={exchangeRate} userType={userType} />
 
       <style jsx>{`
         @keyframes fadeIn {

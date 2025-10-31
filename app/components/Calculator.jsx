@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import ShareCalculation from "./ShareCalculation";
 
 export default function Calculator({ 
   theme, 
@@ -194,28 +195,62 @@ export default function Calculator({
       </div>
 
       {selectedService && (
-        <div className="relative p-8 rounded-2xl bg-gradient-to-r from-blue-500 via-cyan-500 to-yellow-400 text-white overflow-hidden mb-6">
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="relative grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <p className="text-sm font-semibold opacity-90 mb-2">Amount</p>
-              <p className="text-3xl font-black">{formatAmount(convertedAmount, currency)}</p>
-            </div>
-            <div>
-              <p className="text-sm font-semibold opacity-90 mb-2">Fee</p>
-              <p className="text-3xl font-black">{formatAmount(convertedFee, currency)}</p>
-            </div>
-            <div>
-              <p className="text-sm font-semibold opacity-90 mb-2">You'll Receive</p>
-              <p className="text-3xl font-black">{formatAmount(convertedNet, currency)}</p>
+        <>
+          <div className="relative p-8 rounded-2xl bg-gradient-to-r from-blue-500 via-cyan-500 to-yellow-400 text-white overflow-hidden mb-6">
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="relative grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="text-sm font-semibold opacity-90 mb-2">Amount</p>
+                <p className="text-3xl font-black">{formatAmount(convertedAmount, currency)}</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold opacity-90 mb-2">Fee</p>
+                <p className="text-3xl font-black">{formatAmount(convertedFee, currency)}</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold opacity-90 mb-2">You'll Receive</p>
+                <p className="text-3xl font-black">{formatAmount(convertedNet, currency)}</p>
+              </div>
             </div>
           </div>
-        </div>
+
+          <ShareCalculation
+            theme={theme}
+            amount={convertedAmount}
+            fee={convertedFee}
+            net={convertedNet}
+            currency={currency}
+            service={selectedService}
+            category={selectedCategory}
+          />
+        </>
       )}
 
       <button 
         className="group relative w-full px-8 py-5 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-full text-xl shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:scale-105"
         disabled={!selectedService}
+        onClick={() => {
+          if (selectedService) {
+            const calculationData = {
+              service: selectedService,
+              category: selectedCategory,
+              userType,
+              amount: safeAmount,
+              fee: safeFee,
+              net: safeNet,
+              currency
+            };
+            
+            console.log('Saving to history:', calculationData);
+            
+            if (window.addToFeeHistory) {
+              window.addToFeeHistory(calculationData);
+              console.log('Successfully called addToFeeHistory');
+            } else {
+              console.error('window.addToFeeHistory is not available!');
+            }
+          }
+        }}
       >
         {selectedService ? 'Process Transaction' : 'Select a Service'}
         <ArrowRight className="inline-block ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
